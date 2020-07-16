@@ -1,0 +1,340 @@
+{
+  "sessions": [
+    {
+      "cnpj": "4363274585679890",
+      "password": "sdghasdhahwetryuy",
+      "id": 2
+    },
+    {
+      "cnpj": "124323453667545747734",
+      "password": "dsagsdaggsdgdsh",
+      "id": 3
+    },
+    {
+      "cnpj": "2136437569876999670",
+      "password": "sdgasdgsd",
+      "id": 4
+    },
+    {
+      "cnpj": "2364257569867597659076",
+      "password": "cxsdbzxcncvnm",
+      "id": 5
+    },
+    {
+      "cnpj": "432745859674906784689365",
+      "password": "gdsfhfgdjdgfjgfj",
+      "id": 6
+    },
+    {
+      "cnpj": "32534674358765865868948",
+      "password": "sdgdshfdfsh",
+      "id": 7
+    },
+    {
+      "cnpj": "123644538767559768596789",
+      "password": "dfshdsfhfd",
+      "id": 8
+    },
+    {
+      "cnpj": "35437568679867967sd",
+      "password": "ghdfhfgjfgj",
+      "id": 9
+    },
+    {
+      "cnpj": "346747568679679679",
+      "password": "hdsfhdfhjfh",
+      "id": 10
+    },
+    {
+      "cnpj": "3246758679709670",
+      "password": "dfhsdfhdfh",
+      "id": 11
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 12
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 13
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 14
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 15
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 16
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 17
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 18
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 19
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 20
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 21
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 22
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 23
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 24
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 25
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 26
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 27
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 28
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "09709771400",
+      "id": 29
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 30
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 31
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 32
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 33
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 34
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abcd123456",
+      "id": 35
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 36
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abcd123456",
+      "id": 37
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 38
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc12345",
+      "id": 39
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc12345",
+      "id": 40
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 41
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc12345",
+      "id": 42
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc12345",
+      "id": 43
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc12345",
+      "id": 44
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 45
+    }
+  ],
+  "products": [
+    {
+      "id": 3,
+      "title": "Loja Virtual",
+      "price": 2190.9,
+      "image": "virtual.jpg"
+    },
+    {
+      "image": "ead.jpg",
+      "title": "Rede Social Corporativa 2",
+      "price": 13679.9,
+      "id": 5
+    },
+    {
+      "id": 6,
+      "title": "Programa de Geolocalização pelo celular",
+      "price": 21909.9,
+      "image": "industria.jpg"
+    },
+    {
+      "id": 4,
+      "title": "API em nuvem",
+      "price": 17989.9,
+      "image": "civil.jpg"
+    },
+    {
+      "image": "ead.jpg",
+      "title": "Sala EAD",
+      "price": "2344",
+      "id": 8
+    },
+    {
+      "image": "ead.jpg",
+      "title": "Ead Novo",
+      "price": "234235",
+      "id": 9
+    },
+    {
+      "image": "ead.jpg",
+      "title": "Aplicativo Movel",
+      "price": "1000",
+      "id": 10
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "José Rios",
+      "formalname": "Empresa A",
+      "fantasyname": "Empresa 1",
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "token": "asddeaf",
+      "admin": true
+    },
+    {
+      "id": 2,
+      "name": "José Januario Rios",
+      "formalname": "Empresa A",
+      "fantasyname": "Empresa 1",
+      "cnpj": "12345678901235",
+      "password": "abc123",
+      "token": "asddeaf",
+      "admin": false
+    },
+    {
+      "id": 3,
+      "name": "José Alencar Rios",
+      "formalname": "Empresa A",
+      "fantasyname": "Empresa 1",
+      "cnpj": "12345678901236",
+      "password": "abc123",
+      "token": "asddeaf",
+      "admin": false
+    },
+    {
+      "id": 4,
+      "name": "José João Rios",
+      "formalname": "Empresa A",
+      "fantasyname": "Empresa 1",
+      "cnpj": "12345678901237",
+      "password": "abc123",
+      "token": "asddeaf",
+      "admin": false
+    },
+    {
+      "id": 5,
+      "name": "José Jacinto Rios",
+      "formalname": "Empresa A",
+      "fantasyname": "Empresa 1",
+      "cnpj": "12345678901238",
+      "password": "abc123",
+      "token": "asddeaf",
+      "admin": false
+    },
+    {
+      "id": 6,
+      "name": "José Maria Rios",
+      "formalname": "Empresa A",
+      "fantasyname": "Empresa 1",
+      "cnpj": "12345678901239",
+      "password": "abc123",
+      "token": "asddeaf",
+      "admin": false
+    },
+    {
+      "cnpj": "2354326534764575475437",
+      "password": "dsgsadghdfhdf",
+      "email": "teste@teste.com",
+      "name": "Cláudio Filipe Lima Rapôso",
+      "fantasyname": "testeteste",
+      "originalname": "testeteste",
+      "admin": false,
+      "id": 7
+    }
+  ]
+}
