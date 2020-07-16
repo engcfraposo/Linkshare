@@ -39,9 +39,9 @@ O projeto foi feito com as seguintes tecnologias:
 
 - [ReactJS](https://pt-br.reactjs.org/)
 - [Recharts](https://recharts.org/)
-- [Material UI]
-- [Formik]
-- [YUP]
+- [Material UI](https://material-ui.com/pt/)
+- [Formik](https://formik.org/)
+- [YUP](https://www.npmjs.com/package/yup)
 - [Styled-Components](https://styled-components.com/)
 {...}
 
