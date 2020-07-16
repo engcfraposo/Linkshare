@@ -4,7 +4,6 @@ import * as yup from 'yup';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import { useHistory } from 'react-router-dom';
 import api from '../../services/api';
 // import {useAuth} from '../../hooks/AuthContext' //Em Caso de utilizar Backend com JWT
 // import {useToast} from '../../hooks/ToastContext' //Em Caso de utilizar Backend com JWT
@@ -24,22 +23,18 @@ const validations = yup.object().shape({
 const initialValues = {};
 const CreateProductComponent: React.FC = () => {
   // const { addToast } = useToast(); //Em Caso de utilizar Backend com JWT
-  const history = useHistory();
 
-  const handleSubmit = useCallback(
-    async (data: any) => {
-      const { photo, title, price } = data;
+  const handleSubmit = useCallback(async (data: any) => {
+    const { title, price } = data;
 
-      await api.post('products', {
-        image: 'ead.jpg',
-        title,
-        price,
-      });
+    await api.post('products', {
+      image: 'ead.jpg',
+      title,
+      price,
+    });
 
-      return (window.location.href = '/Admin');
-    },
-    [history],
-  );
+    return (window.location.href = '/Admin');
+  }, []);
 
   return (
     <Container maxWidth="md">
