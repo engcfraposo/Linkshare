@@ -219,21 +219,24 @@
       "cnpj": "12345678901234",
       "password": "abc123456",
       "id": 45
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 46
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 47
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 48
     }
   ],
   "products": [
-    {
-      "id": 3,
-      "title": "Loja Virtual",
-      "price": 2190.9,
-      "image": "virtual.jpg"
-    },
-    {
-      "image": "ead.jpg",
-      "title": "Rede Social Corporativa 2",
-      "price": 13679.9,
-      "id": 5
-    },
     {
       "id": 6,
       "title": "Programa de Geolocalização pelo celular",
@@ -260,9 +263,15 @@
     },
     {
       "image": "ead.jpg",
-      "title": "Aplicativo Movel",
-      "price": "1000",
+      "title": "Sala de Aula",
+      "price": "32423",
       "id": 10
+    },
+    {
+      "image": "ead.jpg",
+      "title": "Online",
+      "price": "436436",
+      "id": 11
     }
   ],
   "users": [

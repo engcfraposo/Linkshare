@@ -36,9 +36,7 @@ const CreateProductComponent: React.FC = () => {
         price,
       });
 
-      alert(photo);
-
-      history.push('/Admin');
+      return (window.location.href = '/Admin');
     },
     [history],
   );

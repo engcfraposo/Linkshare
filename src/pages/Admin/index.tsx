@@ -25,6 +25,7 @@ const Cart: React.FC = () => {
 
   const handleDelete = async (id: number) => {
     await api.delete<IProduct[]>(`/products/${id}`);
+    return (window.location.href = '/Admin');
   };
 
   const handleEdit = async (product: IProduct) => {
