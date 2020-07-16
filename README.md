@@ -1,5 +1,5 @@
 <div align="center" style="margin-bottom: 20px;">
-<img alt="jst-job-challenges-frontend" src="./img/logo.png" width="auto" heigth="auto"/>
+<img alt="linkshare" src="./img/logo.png" width="auto" heigth="auto"/>
 </div>
 
 <div align="center" style="margin: 20px;">
