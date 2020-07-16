@@ -25,7 +25,7 @@
 
 ## :barber: O projeto
 
-O Análise de Portifólio do Github é um projeto em formato de DashBoard que tem como finalidade evidenciar aspectos quantitativos de produtividade em programação dos respectivos respositórios.
+A loja virtual LinkShare Softwares tem como objetivo trazer soluções na área de desenvolvimento através de uma loja virtual onde seus clientes poderam realizar compras.
 
 ## :fire: Prévia da Aplicação
 
@@ -39,12 +39,15 @@ O projeto foi feito com as seguintes tecnologias:
 
 - [ReactJS](https://pt-br.reactjs.org/)
 - [Recharts](https://recharts.org/)
+- [Material UI](https://material-ui.com/pt/)
+- [Formik](https://formik.org/)
+- [YUP](https://www.npmjs.com/package/yup)
 - [Styled-Components](https://styled-components.com/)
 {...}
 
 ## :hammer: Deploy da Aplicação
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8316b6e0-f98a-4c2b-8bcb-65adf499bf41/deploy-status)](https://app.netlify.com/sites/jst-job-challenges-frontend/deploys)
+Em construção
 
 
 ## :thinking: Como Contribuir?
@@ -69,8 +72,8 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 ## :zap: Executando o Projeto
 #### Clonando o projeto
 ```sh
-$ git clone https://github.com/engcfraposo/jst-job-challenges-frontend.git
-$ cd jst-job-challenges-frontend
+$ git clone https://github.com/engcfraposo/linkshare.git
+$ cd linkshare
 ```
 
 #### Iniciando o Frontend
