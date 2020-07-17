@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useSelector } from 'react-redux';
 import {
@@ -18,7 +17,7 @@ const HeaderComponent: React.FC = () => {
   const cartStore = useSelector((state: RootState) => state.cart);
   const admin = localStorage.getItem('@LinkShare:user');
   const token = localStorage.getItem('@LinkShare:token');
-  
+
   const handleLogout = (event: React.SyntheticEvent) => {
     event.preventDefault();
     signOut();
@@ -38,7 +37,10 @@ const HeaderComponent: React.FC = () => {
           <Links to="/cart">
             <div>
               <strong>Meu Carrinho</strong>
-              <span>{cartStore.length} itens</span>
+              <span>{cartStore.length}
+{' '}
+itens
+</span>
             </div>
             <MdShoppingBasket size={36} color="#fff" />
           </Links>

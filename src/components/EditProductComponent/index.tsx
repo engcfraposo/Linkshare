@@ -25,8 +25,9 @@ const validations = yup.object().shape({
 
 const EditProductComponent: React.FC = () => {
   const history = useHistory();
-  const token = await localStorage.getItem('@LinkShare:token');
-  const admin = await localStorage.getItem('@LinkShare:user');
+
+  const token = localStorage.getItem('@LinkShare:token');
+  const admin = localStorage.getItem('@LinkShare:user');
   const product_id = localStorage.getItem('@LinkShare:id');
   const product_title = localStorage.getItem('@LinkShare:title');
   const product_image = localStorage.getItem('@LinkShare:image');
@@ -38,7 +39,7 @@ const EditProductComponent: React.FC = () => {
     async (data: any) => {
       const { title, price } = data;
 
-      //imagem não trocado por questão de estetica.
+      // imagem não trocado por questão de estetica.
       await api.put(`products/${id}`, {
         image: 'ead.jpg',
         title,
@@ -49,10 +50,10 @@ const EditProductComponent: React.FC = () => {
         },
       });
 
-      alert('Produto editado!')
+      alert('Produto editado!');
       history.push('/Admin');
     },
-    [history, id],
+    [history, id, token, admin],
   );
 
   const handleCancel = (event: React.SyntheticEvent) => {

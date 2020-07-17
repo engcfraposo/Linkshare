@@ -38,7 +38,7 @@ const LoginComponent: React.FC = () => {
         await signIn({ cnpj, password });
         return (window.location.href = '/');
       } catch (err) {
-          alert('Falha na validação, tente mais tarde!')
+        alert('Falha na validação, tente mais tarde!');
       }
     },
     [signIn],
