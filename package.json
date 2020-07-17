@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
+    "@react-native-community/async-storage": "^1.11.0",
     "axios": "^0.19.2",
     "formik": "^2.1.5",
     "history": "^4.10.1",

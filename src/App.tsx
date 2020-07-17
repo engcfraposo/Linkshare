@@ -10,17 +10,20 @@ import HeaderComponent from './components/HeaderComponent';
 
 import GlobalStyle from './styles/global';
 import FooterComponent from './components/FooterComponent';
+import AppProvider from './hooks';
 
 function App() {
   return (
-    <Provider store={store}>
-      <Router history={history}>
-        <GlobalStyle />
-        <HeaderComponent />
-        <Routes />
-        <FooterComponent />
-      </Router>
-    </Provider>
+    <AppProvider>
+      <Provider store={store}>
+        <Router history={history}>
+          <GlobalStyle />
+          <HeaderComponent />
+          <Routes />
+          <FooterComponent />
+        </Router>
+      </Provider>
+    </AppProvider>
   );
 }
 

@@ -234,6 +234,26 @@
       "cnpj": "12345678901234",
       "password": "abc123456",
       "id": 48
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc12345",
+      "id": 49
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 50
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc12345",
+      "id": 51
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc12345",
+      "id": 52
     }
   ],
   "products": [
@@ -272,6 +292,36 @@
       "title": "Online",
       "price": "436436",
       "id": 11
+    },
+    {
+      "image": "ead.jpg",
+      "title": "Bolda",
+      "price": "24124",
+      "headers": {
+        "token": "fake token",
+        "admin": "fake token"
+      },
+      "id": 12
+    },
+    {
+      "image": "ead.jpg",
+      "title": "teste 2",
+      "price": "325",
+      "headers": {
+        "token": "fake token",
+        "admin": null
+      },
+      "id": 13
+    },
+    {
+      "image": "ead.jpg",
+      "title": "teste 3",
+      "price": "231412",
+      "headers": {
+        "token": "fake token",
+        "admin": "{\"id\":\"1\",\"name\":\"Cláudio Filipe Lima Rapôso\",\"cnpj\":\"12345678901234\",\"admin\":\"true\"}"
+      },
+      "id": 14
     }
   ],
   "users": [

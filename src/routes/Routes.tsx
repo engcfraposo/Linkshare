@@ -1,6 +1,6 @@
 import React from 'react';
 import { RouteProps, Route as ReactRouteDom, Redirect } from 'react-router-dom';
-// mport { useAuth } from '../hooks/AuthContext';
+import { useAuth } from '../hooks/AuthContext';
 
 interface RoutePropsRouterDom extends RouteProps {
   isPrivate?: boolean;
@@ -12,9 +12,9 @@ const RouteDom: React.FC<RoutePropsRouterDom> = ({
   component: Component,
   ...rest
 }) => {
-  // const { user } = useAuth();
-  const user = localStorage.getItem('@LinkShare:admin');
+  const { user } = useAuth();
 
+  console.log(user, isPrivate);
   return (
     <ReactRouteDom
       {...rest}
@@ -24,7 +24,7 @@ const RouteDom: React.FC<RoutePropsRouterDom> = ({
         ) : (
           <Redirect
             to={{
-              pathname: isPrivate ? '/' : '/Admin',
+              pathname: isPrivate ? '/' : '/dashboard',
               state: { from: location },
             }}
           />

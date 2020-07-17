@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-one-expression-per-line */
+
 import React from 'react';
 import { useSelector } from 'react-redux';
 import {
@@ -7,19 +7,21 @@ import {
   MdExitToApp,
   MdSwapVerticalCircle,
 } from 'react-icons/md';
-
 import { RootState } from '../../store/modules/rootReducer';
 import logo from '../../assets/logo.png';
 import { Container, Links, Logout, StatusBar } from './styles';
+import { useAuth } from '../../hooks/AuthContext';
 
 const HeaderComponent: React.FC = () => {
-  const cartStore = useSelector((state: RootState) => state.cart);
-  const admin = localStorage.getItem('@LinkShare:admin');
-  const token = localStorage.getItem('@LinkShare:token');
+  const { signOut } = useAuth();
 
+  const cartStore = useSelector((state: RootState) => state.cart);
+  const admin = localStorage.getItem('@LinkShare:user');
+  const token = localStorage.getItem('@LinkShare:token');
+  
   const handleLogout = (event: React.SyntheticEvent) => {
     event.preventDefault();
-    localStorage.clear();
+    signOut();
     return (window.location.href = '/SingIn');
   };
 

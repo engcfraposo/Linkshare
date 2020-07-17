@@ -55,7 +55,7 @@ Em construção
 
 ```bash
 # Clone o seu fork
-$ git clone url-do-seu-fork && cd jst-job-challenges-frontend
+$ git clone url-do-seu-fork && cd Linksoftwares
 
 # Crie uma branch com sua feature ou correção de bugs
 $ git checkout -b minha-branch
@@ -74,6 +74,11 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 ```sh
 $ git clone https://github.com/engcfraposo/linkshare.git
 $ cd linkshare
+```
+
+#### Iniciando o Backend
+```sh
+$ json-server --port 3333 api.json
 ```
 
 #### Iniciando o Frontend

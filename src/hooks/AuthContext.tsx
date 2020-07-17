@@ -38,10 +38,22 @@ const AuthProvider: React.FC = ({ children }) => {
       password,
     });
 
-    const { token, user } = response.data;
+    console.log(response);
+
+    const token = 'fake token';
+    const user = {
+      id: '1',
+      name: 'Cláudio Filipe Lima Rapôso',
+      cnpj,
+      admin: 'true',
+    };
+
+    // const { token, user } = response.data;
 
     localStorage.setItem('@LinkShare:token', token);
     localStorage.setItem('@LinkShare:user', JSON.stringify(user));
+
+    // api.defaults.headers.authorization = `Bearer ${token}`;
 
     setData({ token, user });
   }, []);

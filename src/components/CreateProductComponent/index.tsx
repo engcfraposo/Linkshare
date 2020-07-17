@@ -1,12 +1,10 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React, { useCallback } from 'react';
 import * as yup from 'yup';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import api from '../../services/api';
-// import {useAuth} from '../../hooks/AuthContext' //Em Caso de utilizar Backend com JWT
-// import {useToast} from '../../hooks/ToastContext' //Em Caso de utilizar Backend com JWT
+
 import {
   FormikError,
   FormikContainer,
@@ -22,17 +20,22 @@ const validations = yup.object().shape({
 
 const initialValues = {};
 const CreateProductComponent: React.FC = () => {
-  // const { addToast } = useToast(); //Em Caso de utilizar Backend com JWT
-
   const handleSubmit = useCallback(async (data: any) => {
     const { title, price } = data;
+
+    const token = await localStorage.getItem('@LinkShare:token');
+    const admin = await localStorage.getItem('@LinkShare:user');
 
     await api.post('products', {
       image: 'ead.jpg',
       title,
       price,
+      headers: {
+        token,
+        admin,
+      },
     });
-
+    alert('Produto Criado!');
     return (window.location.href = '/Admin');
   }, []);
 

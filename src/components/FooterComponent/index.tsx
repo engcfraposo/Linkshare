@@ -9,8 +9,8 @@ function Copyright() {
       {'Copyright © '}
       <Link color="primary" href="https://github.com/engcfraposo">
         engcfraposo
-      </Link>{' '}
-      {new Date().getFullYear()}.
+      </Link>
+      {new Date().getFullYear()}
     </Typography>
   );
 }

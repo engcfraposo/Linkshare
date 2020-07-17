@@ -6,8 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import LoginLinkComponent from './LoginLinkComponent';
 import api from '../../services/api';
-// import {useAuth} from '../../hooks/AuthContext' //Em Caso de utilizar Backend com JWT
-// import {useToast} from '../../hooks/ToastContext' //Em Caso de utilizar Backend com JWT
+import { useAuth } from '../../hooks/AuthContext';
 import {
   FormikError,
   FormikContainer,
@@ -23,36 +22,27 @@ const validations = yup.object().shape({
 
 const initialValues = {};
 const LoginComponent: React.FC = () => {
-  // const { signIn } = useAuth(); //Em Caso de utilizar Backend com JWT
-  // const { addToast } = useToast(); //Em Caso de utilizar Backend com JWT
+  const { signIn } = useAuth();
 
-  /** const handleSubmit = useCallback(async (data)  => { 
-    const {cnpj, password} = data;
-    signIn({ cnpj, password }) 
-    return history.push('/') */
+  const handleSubmit = useCallback(
+    async data => {
+      const { cnpj, password } = data;
 
-  const handleSubmit = useCallback(async data => {
-    const { cnpj, password } = data;
+      const response = await api.get('users', { params: { cnpj } });
 
-    const response = await api.get('users', { params: { cnpj } });
+      if (response.data.length === 0) {
+        alert('Usuario não existe!');
+      }
 
-    if (response.data.length === 0) {
-      alert('Usuario não existe!');
-    }
-
-    const { token, admin } = response.data[0];
-
-    localStorage.setItem('@LinkShare:admin', admin);
-    localStorage.setItem('@LinkShare:token', token);
-
-    // signIn({ cnpj, password }) //Em Caso de utilizar Backend com JWT
-    await api.post('sessions', {
-      cnpj,
-      password,
-    });
-
-    return (window.location.href = '/');
-  }, []);
+      try {
+        await signIn({ cnpj, password });
+        return (window.location.href = '/');
+      } catch (err) {
+          alert('Falha na validação, tente mais tarde!')
+      }
+    },
+    [signIn],
+  );
 
   return (
     <Container maxWidth="md">

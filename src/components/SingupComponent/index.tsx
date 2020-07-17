@@ -31,12 +31,6 @@ const validations = yup.object().shape({
 
 const initialValues = {};
 const SingupComponent: React.FC = () => {
-  // const { addToast } = useToast(); //Em Caso de utilizar Backend com JWT
-  /** const handleSubmit = useCallback(async (data)  => { 
-    const {cnpj, password} = data;
-    signIn({ cnpj, password }) 
-    return history.push('/') */
-
   const handleSubmit = useCallback(async data => {
     const { cnpj, password, email, name, fantasyname, originalname } = data;
 
@@ -73,7 +67,7 @@ const SingupComponent: React.FC = () => {
               label="name"
               type="text"
             />
-            <FormikError component="span" name="email" />
+            <FormikError component="span" name="name" />
           </FormikGroup>
           <FormikGroup>
             <FormikField
@@ -83,7 +77,7 @@ const SingupComponent: React.FC = () => {
               label="originalname"
               type="text"
             />
-            <FormikError component="span" name="email" />
+            <FormikError component="span" name="originalname" />
           </FormikGroup>
           <FormikGroup>
             <FormikField
@@ -93,7 +87,7 @@ const SingupComponent: React.FC = () => {
               label="fantasyname"
               type="text"
             />
-            <FormikError component="span" name="email" />
+            <FormikError component="span" name="fantasyname" />
           </FormikGroup>
           <FormikGroup>
             <FormikField
