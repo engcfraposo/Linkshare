@@ -25,7 +25,7 @@
 
 ## :barber: O projeto
 
-A loja virtual LinkShare Softwares tem como objetivo trazer soluções na área de desenvolvimento através de uma loja virtual onde seus clientes poderam realizar compras.
+A loja virtual LinkShare Softwares tem como objetivo trazer soluções na área de desenvolvimento através de uma loja virtual onde seus clientes poderão realizar compras.
 
 ## :fire: Prévia da Aplicação
 
