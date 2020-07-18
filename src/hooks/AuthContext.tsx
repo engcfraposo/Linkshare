@@ -41,7 +41,7 @@ const AuthProvider: React.FC = ({ children }) => {
       });
 
       try {
-        if(Object.keys(users).length !== 0){
+        if (Object.keys(users).length !== 0) {
           try {
             if (users.data.password === password) {
               try {
@@ -63,9 +63,7 @@ const AuthProvider: React.FC = ({ children }) => {
                 });
                 return setData({ token, user });
               } catch (error) {
-                return alert(
-                  'Falha na autenticação, token ivalido'
-                );
+                return alert('Falha na autenticação, token ivalido');
               }
             }
           } catch (error) {
@@ -75,15 +73,10 @@ const AuthProvider: React.FC = ({ children }) => {
           }
         }
       } catch (error) {
-        return alert('Usuario não encontrado')
+        return alert('Usuario não encontrado');
       }
 
-
-
-
-
       // const { token, user } = response.data;
-
 
       // history.push('/dashboard');
     } catch (err) {
