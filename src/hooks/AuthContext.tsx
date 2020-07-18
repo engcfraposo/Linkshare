@@ -34,7 +34,13 @@ const AuthProvider: React.FC = ({ children }) => {
 
   const signIn = useCallback(async ({ cnpj, password }) => {
     try {
-      if (!response.data.password === password) {
+      const users = await api.get('users', {
+        params: {
+          cnpj,
+        },
+      });
+
+      if (!users.data.password === password) {
         return alert(
           'Falha na autenticação, Houve um erro no login, verifique seu email/senha',
         );
