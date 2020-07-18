@@ -33,13 +33,12 @@ const AuthProvider: React.FC = ({ children }) => {
   });
 
   const signIn = useCallback(async ({ cnpj, password }) => {
-
     try {
-         const response = await api.post('sessions', {
-        cnpj,
-        password,
-      });
-
+      if (!response.data.password === password) {
+        return alert(
+          'Falha na autenticação, Houve um erro no login, verifique seu email/senha',
+        );
+      }
       // const { token, user } = response.data;
 
       const token = 'fake token';
@@ -54,10 +53,16 @@ const AuthProvider: React.FC = ({ children }) => {
 
       localStorage.setItem('@LinkShare:token', token);
       localStorage.setItem('@LinkShare:user', JSON.stringify(user));
-      setData({ token, user });
+      const response = await api.post('sessions', {
+        cnpj,
+        password,
+      });
+      return setData({ token, user });
       // history.push('/dashboard');
     } catch (err) {
-      alert('Falha na autenticação, Houve um erro no login, verifique seu email/senha');
+      return alert(
+        'Falha na autenticação, Houve um erro no login, verifique seu email/senha',
+      );
     }
   }, []);
 
