@@ -1,11 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import {
-  MdShoppingBasket,
-  MdPerson,
-  MdExitToApp,
-  MdSwapVerticalCircle,
-} from 'react-icons/md';
+import { MdShoppingBasket, MdPerson, MdExitToApp } from 'react-icons/md';
+import { FaKey } from 'react-icons/fa';
 import { RootState } from '../../store/modules/rootReducer';
 import logo from '../../assets/logo.png';
 import { Container, Links, Logout, StatusBar } from './styles';
@@ -37,16 +33,13 @@ const HeaderComponent: React.FC = () => {
           <Links to="/cart">
             <div>
               <strong>Meu Carrinho</strong>
-              <span>{cartStore.length}
-{' '}
-itens
-</span>
+              <span>{cartStore.length} itens</span>
             </div>
             <MdShoppingBasket size={36} color="#fff" />
           </Links>
           {admin ? (
             <Links to="/Admin">
-              <MdSwapVerticalCircle size={36} color="#fff" />
+              <FaKey size={36} color="#fff" />
             </Links>
           ) : (
             <></>

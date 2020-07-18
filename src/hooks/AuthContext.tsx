@@ -33,29 +33,32 @@ const AuthProvider: React.FC = ({ children }) => {
   });
 
   const signIn = useCallback(async ({ cnpj, password }) => {
-    const response = await api.post('sessions', {
-      cnpj,
-      password,
-    });
 
-    console.log(response);
+    try {
+         const response = await api.post('sessions', {
+        cnpj,
+        password,
+      });
 
-    const token = 'fake token';
-    const user = {
-      id: '1',
-      name: 'Cláudio Filipe Lima Rapôso',
-      cnpj,
-      admin: 'true',
-    };
+      // const { token, user } = response.data;
 
-    // const { token, user } = response.data;
+      const token = 'fake token';
+      const user = {
+        id: '1',
+        name: 'Cláudio Filipe Lima Rapôso',
+        cnpj,
+        admin: 'true',
+      };
 
-    localStorage.setItem('@LinkShare:token', token);
-    localStorage.setItem('@LinkShare:user', JSON.stringify(user));
+      // api.defaults.headers.Authorization = `Baerer ${token}`;
 
-    // api.defaults.headers.authorization = `Bearer ${token}`;
-
-    setData({ token, user });
+      localStorage.setItem('@LinkShare:token', token);
+      localStorage.setItem('@LinkShare:user', JSON.stringify(user));
+      setData({ token, user });
+      // history.push('/dashboard');
+    } catch (err) {
+      alert('Falha na autenticação, Houve um erro no login, verifique seu email/senha');
+    }
   }, []);
 
   const signOut = useCallback(async () => {
