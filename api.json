@@ -289,6 +289,31 @@
       "cnpj": "12345678901234",
       "password": "abc12345",
       "id": 59
+    },
+    {
+      "cnpj": "1234556347645",
+      "password": "sadfsddfhsd",
+      "id": 60
+    },
+    {
+      "cnpj": "12345678901234557678",
+      "password": "asdafags",
+      "id": 61
+    },
+    {
+      "cnpj": "327132865987216",
+      "password": "abv231407",
+      "id": 62
+    },
+    {
+      "cnpj": "43267458548569856764",
+      "password": "sdagsadggdsgsdg",
+      "id": 63
+    },
+    {
+      "cnpj": "1234565677980898",
+      "password": "sajflhdlgdsgsdfgg",
+      "id": 64
     }
   ],
   "products": [

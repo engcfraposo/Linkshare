@@ -40,30 +40,51 @@ const AuthProvider: React.FC = ({ children }) => {
         },
       });
 
-      if (!users.data.password === password) {
-        return alert(
-          'Falha na autenticação, Houve um erro no login, verifique seu email/senha',
-        );
+      try {
+        if(Object.keys(users).length !== 0){
+          try {
+            if (users.data.password === password) {
+              try {
+                const token = 'fake token';
+                const user = {
+                  id: '1',
+                  name: 'Cláudio Filipe Lima Rapôso',
+                  cnpj,
+                  admin: 'true',
+                };
+
+                // api.defaults.headers.Authorization = `Baerer ${token}`;
+
+                localStorage.setItem('@LinkShare:token', token);
+                localStorage.setItem('@LinkShare:user', JSON.stringify(user));
+                const response = await api.post('sessions', {
+                  cnpj,
+                  password,
+                });
+                return setData({ token, user });
+              } catch (error) {
+                return alert(
+                  'Falha na autenticação, token ivalido'
+                );
+              }
+            }
+          } catch (error) {
+            return alert(
+              'Falha na autenticação, Houve um erro no login, verifique seu email/senha',
+            );
+          }
+        }
+      } catch (error) {
+        return alert('Usuario não encontrado')
       }
+
+
+
+
+
       // const { token, user } = response.data;
 
-      const token = 'fake token';
-      const user = {
-        id: '1',
-        name: 'Cláudio Filipe Lima Rapôso',
-        cnpj,
-        admin: 'true',
-      };
 
-      // api.defaults.headers.Authorization = `Baerer ${token}`;
-
-      localStorage.setItem('@LinkShare:token', token);
-      localStorage.setItem('@LinkShare:user', JSON.stringify(user));
-      const response = await api.post('sessions', {
-        cnpj,
-        password,
-      });
-      return setData({ token, user });
       // history.push('/dashboard');
     } catch (err) {
       return alert(
