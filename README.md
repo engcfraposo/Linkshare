@@ -25,7 +25,7 @@
 
 ## :barber: O projeto
 
-A loja virtual LinkShare Softwares tem como objetivo trazer soluções na área de desenvolvimento através de uma loja virtual onde seus clientes poderam realizar compras.
+A loja virtual LinkShare Softwares tem como objetivo trazer soluções na área de desenvolvimento através de uma loja virtual onde seus clientes poderão realizar compras.
 
 ## :fire: Prévia da Aplicação
 
@@ -38,7 +38,8 @@ A loja virtual LinkShare Softwares tem como objetivo trazer soluções na área 
 O projeto foi feito com as seguintes tecnologias:
 
 - [ReactJS](https://pt-br.reactjs.org/)
-- [Recharts](https://recharts.org/)
+- [Redux](https://recharts.org/)
+- [ContextApi](https://pt-br.reactjs.org/docs/context.html)
 - [Material UI](https://material-ui.com/pt/)
 - [Formik](https://formik.org/)
 - [YUP](https://www.npmjs.com/package/yup)
