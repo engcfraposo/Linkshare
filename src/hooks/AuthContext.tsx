@@ -54,6 +54,7 @@ const AuthProvider: React.FC = ({ children }) => {
                 };
 
                 // api.defaults.headers.Authorization = `Baerer ${token}`;
+                // const { token, user } = response.data;
 
                 localStorage.setItem('@LinkShare:token', token);
                 localStorage.setItem('@LinkShare:user', JSON.stringify(user));
@@ -63,7 +64,7 @@ const AuthProvider: React.FC = ({ children }) => {
                 });
                 return setData({ token, user });
               } catch (error) {
-                return alert('Falha na autenticação, token ivalido');
+                return alert('Falha na autenticação, token invalido');
               }
             }
           } catch (error) {
@@ -75,10 +76,6 @@ const AuthProvider: React.FC = ({ children }) => {
       } catch (error) {
         return alert('Usuario não encontrado');
       }
-
-      // const { token, user } = response.data;
-
-      // history.push('/dashboard');
     } catch (err) {
       return alert(
         'Falha na autenticação, Houve um erro no login, verifique seu email/senha',
