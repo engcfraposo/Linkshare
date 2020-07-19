@@ -53,7 +53,6 @@ const AuthProvider: React.FC = ({ children }) => {
 
      localStorage.setItem('@LinkShare:token', token);
      localStorage.setItem('@LinkShare:user', JSON.stringify(user));
-     console.log(user)
      setData({ token, user });
      // history.push('/dashboard');
    } catch (err) {
