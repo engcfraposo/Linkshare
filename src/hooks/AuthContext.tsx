@@ -33,62 +33,39 @@ const AuthProvider: React.FC = ({ children }) => {
   });
 
   const signIn = useCallback(async ({ cnpj, password }) => {
-    try {
-      const users = await api.get('users', {
-        params: {
-          cnpj,
-        },
-      });
-
       try {
-        if (Object.keys(users).length !== 0) {
-          try {
-            if (users.data.password === password) {
-              try {
-                const token = 'fake token';
-                const user = {
-                  id: '1',
-                  name: 'Cláudio Filipe Lima Rapôso',
-                  cnpj,
-                  admin: 'true',
-                };
+        const response = await api.post('sessions', {
+       cnpj,
+       password,
+     });
 
-                // api.defaults.headers.Authorization = `Baerer ${token}`;
-                // const { token, user } = response.data;
+     // const { token, user } = response.data;
 
-                localStorage.setItem('@LinkShare:token', token);
-                localStorage.setItem('@LinkShare:user', JSON.stringify(user));
-                const response = await api.post('sessions', {
-                  cnpj,
-                  password,
-                });
-                return setData({ token, user });
-              } catch (error) {
-                return alert('Falha na autenticação, token invalido');
-              }
-            }
-          } catch (error) {
-            return alert(
-              'Falha na autenticação, Houve um erro no login, verifique seu email/senha',
-            );
-          }
-        }
-      } catch (error) {
-        return alert('Usuario não encontrado');
-      }
-    } catch (err) {
-      return alert(
-        'Falha na autenticação, Houve um erro no login, verifique seu email/senha',
-      );
-    }
+     const token = 'fake token';
+     const user = {
+       id: '1',
+       name: 'Cláudio Filipe Lima Rapôso',
+       cnpj,
+       admin: 'true',
+     };
+
+     // api.defaults.headers.Authorization = `Baerer ${token}`;
+
+     localStorage.setItem('@LinkShare:token', token);
+     localStorage.setItem('@LinkShare:user', JSON.stringify(user));
+     setData({ token, user });
+     // history.push('/dashboard');
+   } catch (err) {
+     alert('Falha na autenticação, Houve um erro no login, verifique seu email/senha');
+   }
   }, []);
 
-  const signOut = useCallback(async () => {
-    localStorage.removeItem('@LinkShare:token');
-    localStorage.removeItem('@LinkShare:user');
+    const signOut = useCallback(async () => {
+      localStorage.removeItem('@LinkShare:token');
+      localStorage.removeItem('@LinkShare:user');
 
-    setData({} as AuthState);
-  }, []);
+      setData({} as AuthState);
+    }, []);
 
   return (
     <AuthContext.Provider value={{ user: data.user, signIn, signOut }}>

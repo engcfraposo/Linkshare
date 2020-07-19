@@ -319,61 +319,6 @@
       "cnpj": "12345678901234",
       "password": "abc12345",
       "id": 65
-    },
-    {
-      "cnpj": "12345678901234",
-      "password": "abc12345",
-      "id": 66
-    },
-    {
-      "cnpj": "12345678901234",
-      "password": "abc12345",
-      "id": 67
-    },
-    {
-      "cnpj": "2315432643274574575474",
-      "password": "sadfgsdgsgsdgsdgg",
-      "id": 68
-    },
-    {
-      "cnpj": "214236547348659456",
-      "password": "243524634263445r2346534674",
-      "id": 69
-    },
-    {
-      "cnpj": "231548723652357632656656920365523235353474573547856856965",
-      "password": "sdagdsfggsg",
-      "id": 70
-    },
-    {
-      "cnpj": "1236547854386354823563246732723475427",
-      "password": "sdfgdfshgasdgasgdsgsgdgsdg",
-      "id": 71
-    },
-    {
-      "cnpj": "1236547854386354823563246732723475427",
-      "password": "sdfgdfshgasdgasgdsgsgdgsdg",
-      "id": 72
-    },
-    {
-      "cnpj": "5437568346263",
-      "password": "sadgsdfgsdfgwee",
-      "id": 73
-    },
-    {
-      "cnpj": "3467743895679565463262346317455486",
-      "password": "fdsghwfh",
-      "id": 74
-    },
-    {
-      "cnpj": "4325698032656340689038",
-      "password": "sdgbisdgusghdsjkhhshdsg",
-      "id": 75
-    },
-    {
-      "cnpj": "4325698032656340689038",
-      "password": "sdgbisdgusghdsjkhhshdsg",
-      "id": 76
     }
   ],
   "products": [
