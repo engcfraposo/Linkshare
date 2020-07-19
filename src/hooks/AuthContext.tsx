@@ -35,28 +35,29 @@ const AuthProvider: React.FC = ({ children }) => {
   const signIn = useCallback(async ({ cnpj, password }) => {
       try {
         const response = await api.post('sessions', {
-       cnpj,
-       password,
+        cnpj,
+        password,
      });
+
+    const user = await api.get('users', {params:{cnpj}})
+
+    if(user.data.length == 0 ||user.data.length == null ) {
+      return alert('Falha na autenticação, usuario não existe');
+    }
 
      // const { token, user } = response.data;
 
-     const token = 'fake token';
-     const user = {
-       id: '1',
-       name: 'Cláudio Filipe Lima Rapôso',
-       cnpj,
-       admin: 'true',
-     };
+    const token = 'fake token';
 
      // api.defaults.headers.Authorization = `Baerer ${token}`;
 
      localStorage.setItem('@LinkShare:token', token);
      localStorage.setItem('@LinkShare:user', JSON.stringify(user));
+     console.log(user)
      setData({ token, user });
      // history.push('/dashboard');
    } catch (err) {
-     alert('Falha na autenticação, Houve um erro no login, verifique seu email/senha');
+     return alert('Falha na autenticação, Houve um erro no login, verifique seu email/senha');
    }
   }, []);
 
