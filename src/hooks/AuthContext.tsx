@@ -40,7 +40,7 @@ const AuthProvider: React.FC = ({ children }) => {
      });
 
     const user = await api.get('users', {params:{cnpj}})
-
+     console.log(user.data[1])
     if(user.data.length == 0 ||user.data.length == null ) {
       return alert('Falha na autenticação, usuario não existe');
     }
