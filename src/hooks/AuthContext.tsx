@@ -33,39 +33,35 @@ const AuthProvider: React.FC = ({ children }) => {
   });
 
   const signIn = useCallback(async ({ cnpj, password }) => {
-      try {
-        const response = await api.post('sessions', {
+    try {
+      const response = await api.post('sessions', {
         cnpj,
         password,
-     });
+      });
 
-    const user = await api.get('users', {params:{cnpj}})
-     console.log(user.data[1])
-    if(user.data.length == 0 ||user.data.length == null ) {
-      return alert('Falha na autenticação, usuario não existe');
+      const { token } = response.data;
+
+      const user = await api.get('users', { params: { cnpj } });
+
+      api.defaults.headers.Authorization = `Baerer ${token}`;
+
+      localStorage.setItem('@LinkShare:token', token);
+      localStorage.setItem('@LinkShare:user', JSON.stringify(user));
+      setData({ token, user });
+      // history.push('/dashboard');
+    } catch (err) {
+      return alert(
+        'Falha na autenticação, Houve um erro no login, verifique seu email/senha',
+      );
     }
-
-     // const { token, user } = response.data;
-
-    const token = 'fake token';
-
-     // api.defaults.headers.Authorization = `Baerer ${token}`;
-
-     localStorage.setItem('@LinkShare:token', token);
-     localStorage.setItem('@LinkShare:user', JSON.stringify(user));
-     setData({ token, user });
-     // history.push('/dashboard');
-   } catch (err) {
-     return alert('Falha na autenticação, Houve um erro no login, verifique seu email/senha');
-   }
   }, []);
 
-    const signOut = useCallback(async () => {
-      localStorage.removeItem('@LinkShare:token');
-      localStorage.removeItem('@LinkShare:user');
+  const signOut = useCallback(async () => {
+    localStorage.removeItem('@LinkShare:token');
+    localStorage.removeItem('@LinkShare:user');
 
-      setData({} as AuthState);
-    }, []);
+    setData({} as AuthState);
+  }, []);
 
   return (
     <AuthContext.Provider value={{ user: data.user, signIn, signOut }}>

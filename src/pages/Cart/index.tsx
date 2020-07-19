@@ -56,7 +56,7 @@ const Cart: React.FC = () => {
               <tr key={cart.id}>
                 <td>
                   <img
-                    src={require(`../../assets/${cart.image}`)}
+                    src={require(`../../assets/${cart.image}.jpg`)}
                     alt={cart.image}
                   />
                 </td>

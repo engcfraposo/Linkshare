@@ -23,18 +23,12 @@ const CreateProductComponent: React.FC = () => {
   const handleSubmit = useCallback(async (data: any) => {
     const { title, price } = data;
 
-    const token = await localStorage.getItem('@LinkShare:token');
-    const admin = await localStorage.getItem('@LinkShare:user');
-
     await api.post('products', {
-      image: 'ead.jpg',
+      image: 'ead',
       title,
       price,
-      headers: {
-        token,
-        admin,
-      },
     });
+
     alert('Produto Criado!');
     return (window.location.href = '/Admin');
   }, []);

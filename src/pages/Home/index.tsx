@@ -55,7 +55,7 @@ const Home: React.FC = () => {
         {products.map(product => (
           <li key={product.id}>
             <img
-              src={require(`../../assets/${product.image}`)}
+              src={require(`../../assets/${product.image}.jpg`)}
               alt={product.title}
             />
             <strong>{product.title}</strong>

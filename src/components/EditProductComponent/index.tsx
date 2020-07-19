@@ -41,12 +41,10 @@ const EditProductComponent: React.FC = () => {
 
       // imagem não trocado por questão de estetica.
       await api.put(`products/${id}`, {
-        image: 'ead.jpg',
+        image: 'ead',
         title,
         price: Number(price),
         headers: {
-          token,
-          admin,
         },
       });
 

@@ -419,6 +419,11 @@
       "cnpj": "12345678901234",
       "password": "abc123456",
       "id": 85
+    },
+    {
+      "cnpj": "12345678901234",
+      "password": "abc123456",
+      "id": 86
     }
   ],
   "products": [
@@ -426,67 +431,49 @@
       "id": 6,
       "title": "Programa de Geolocalização pelo celular",
       "price": 21909.9,
-      "image": "industria.jpg"
+      "image": "industria"
     },
     {
       "id": 4,
       "title": "API em nuvem",
       "price": 17989.9,
-      "image": "civil.jpg"
+      "image": "civil"
     },
     {
-      "image": "ead.jpg",
+      "image": "ead",
       "title": "Sala EAD",
       "price": "2344",
       "id": 8
     },
     {
-      "image": "ead.jpg",
+      "image": "ead",
       "title": "Ead Novo",
       "price": "234235",
       "id": 9
     },
     {
-      "image": "ead.jpg",
+      "image": "ead",
       "title": "Sala de Aula",
       "price": "32423",
       "id": 10
     },
     {
-      "image": "ead.jpg",
+      "image": "ead",
       "title": "Online",
       "price": "436436",
       "id": 11
     },
     {
-      "image": "ead.jpg",
+      "image": "ead",
       "title": "Bolda",
       "price": "24124",
-      "headers": {
-        "token": "fake token",
-        "admin": "fake token"
-      },
       "id": 12
     },
     {
-      "image": "ead.jpg",
+      "image": "ead",
       "title": "teste 2",
       "price": "325",
-      "headers": {
-        "token": "fake token",
-        "admin": null
-      },
       "id": 13
-    },
-    {
-      "image": "ead.jpg",
-      "title": "teste 3",
-      "price": "231412",
-      "headers": {
-        "token": "fake token",
-        "admin": "{\"id\":\"1\",\"name\":\"Cláudio Filipe Lima Rapôso\",\"cnpj\":\"12345678901234\",\"admin\":\"true\"}"
-      },
-      "id": 14
     }
   ],
   "users": [
@@ -496,9 +483,7 @@
       "formalname": "Empresa A",
       "fantasyname": "Empresa 1",
       "cnpj": "12345678901234",
-      "password": "abc123456",
-      "token": "asddeaf",
-      "admin": true
+      "password": "abc123456"
     },
     {
       "id": 2,
@@ -506,9 +491,7 @@
       "formalname": "Empresa A",
       "fantasyname": "Empresa 1",
       "cnpj": "12345678901235",
-      "password": "abc123",
-      "token": "asddeaf",
-      "admin": false
+      "password": "abc123"
     },
     {
       "id": 3,
@@ -516,9 +499,7 @@
       "formalname": "Empresa A",
       "fantasyname": "Empresa 1",
       "cnpj": "12345678901236",
-      "password": "abc123",
-      "token": "asddeaf",
-      "admin": false
+      "password": "abc123"
     },
     {
       "id": 4,
@@ -526,9 +507,7 @@
       "formalname": "Empresa A",
       "fantasyname": "Empresa 1",
       "cnpj": "12345678901237",
-      "password": "abc123",
-      "token": "asddeaf",
-      "admin": false
+      "password": "abc123"
     },
     {
       "id": 5,
@@ -536,9 +515,7 @@
       "formalname": "Empresa A",
       "fantasyname": "Empresa 1",
       "cnpj": "12345678901238",
-      "password": "abc123",
-      "token": "asddeaf",
-      "admin": false
+      "password": "abc123"
     },
     {
       "id": 6,
@@ -546,9 +523,7 @@
       "formalname": "Empresa A",
       "fantasyname": "Empresa 1",
       "cnpj": "12345678901239",
-      "password": "abc123",
-      "token": "asddeaf",
-      "admin": false
+      "password": "abc123"
     },
     {
       "cnpj": "2354326534764575475437",
