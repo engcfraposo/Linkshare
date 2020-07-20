@@ -79,7 +79,8 @@ $ cd linkshare
 
 #### Iniciando o Backend
 ```sh
-$ json-server --port 3333 api.json
+$ npm install -g json-server json-server-auth
+$ json-server-auth --port 3333 api.json
 ```
 
 #### Iniciando o Frontend
